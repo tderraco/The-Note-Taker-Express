@@ -1,3 +1,5 @@
+CRUD: create,read ,update, delete
+
 # 11 Express.js: Note Taker
 
 ## Your Task
