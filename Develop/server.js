@@ -11,11 +11,7 @@ app.use(express.json());
 //returns the notes.html
 app.get('/notes', (req, res) => res.sendFile(path.join(__dirname, 'public/notes.html')));
 //saves notes and joins db json
-app.get('/api/notes', (req, res) => {
-   return res.json( fs.readFile('db/db.json','utf-8').then(saveNotes => {
-        return JSON.parse(saveNotes)
-    }))
-});
+app.get('/api/notes', (req, res) => res.json(termData));
 //returns index.html
 app.get('*', (req, res) => res.sendFile(path.join(__dirname, 'public/index.html')));
 //add notes to db json
